@@ -10,7 +10,7 @@
     "test": "jest",
     "compile": "gulp",
     "lint": "eslint --fix --ignore-path .gitignore --ext .js,.ts .",
-    "doc:generator": "typedoc --out docs lib/index.ts",
+    "doc:generate": "typedoc --out docs lib/index.ts",
     "publish:local": "npm run compile && cd dist && npm publish",
     "prepublish:github": "npm run compile",
     "publish:github": "npm publish"
