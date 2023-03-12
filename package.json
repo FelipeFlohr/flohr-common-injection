@@ -1,0 +1,66 @@
+{
+  "name": "@felipeflohr/flohr-common-injection",
+  "version": "1.0.0",
+  "description": "DI and IoC used in my personal projects.",
+  "main": "/lib/index.ts",
+  "scripts": {
+    "test": "jest",
+    "compile": "tsc",
+    "lint": "eslint --fix --ignore-path .gitignore --ext .js,.ts ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelipeFlohr/flohr-common-injection.git"
+  },
+  "keywords": [
+    "ioc",
+    "inversion-of-control",
+    "di",
+    "dependency-injection",
+    "injection",
+    "node"
+  ],
+  "author": "Felipe Matheus Flohr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FelipeFlohr/flohr-common-injection/issues"
+  },
+  "homepage": "https://github.com/FelipeFlohr/flohr-common-injection#readme",
+  "devDependencies": {
+    "@felipeflohr/flohr-common-utils": "^1.0.8",
+    "@types/eslint": "^8.21.1",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.14.6",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "eslint": "^8.35.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^2.12.2",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.0.5",
+    "typedoc": "^0.23.26",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "inversify": "^6.0.1",
+    "reflect-metadata": "^0.1.13"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+        "/node_modules/",
+        "/dist/"
+    ],
+    "transform": {
+        "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+        "node_modules/(?!variables/.*)"
+    ]
+}
+}
