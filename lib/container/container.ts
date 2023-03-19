@@ -27,7 +27,7 @@ interface Container {
      * ```
      */
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    bind<T>(identifier: symbol): Bind
+    bind<T>(identifier: symbol): Bind<T>
     /**
      * Unbinds an abstraction from its implementation.
      * @param identifier The symbol identifier of

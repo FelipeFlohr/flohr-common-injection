@@ -2,19 +2,22 @@ import type { interfaces } from "../../../node_modules/inversify/lib/interfaces/
 import Class from "../../types/class";
 import Bind from "../bind";
 
-export default class InversifyBindImpl<T> implements Bind {
+export default class InversifyBindImpl<T> implements Bind<T> {
     private readonly inversifyBind: interfaces.BindingToSyntax<T>;
 
     public constructor(inversifyBind: interfaces.BindingToSyntax<T>) {
         this.inversifyBind = inversifyBind;
     }
-
-    public toSingleton(impl: Class): void {
+    public toSingleton(impl: Class<T>): void {
         this.inversifyBind.to(impl).inSingletonScope();
     }
 
-    public toTransient(impl: Class): void {
+    public toTransient(impl: Class<T>): void {
         this.inversifyBind.to(impl).inTransientScope();
+    }
+
+    public toConstant(any: T): void {
+        this.inversifyBind.toConstantValue(any);
     }
 
     /**

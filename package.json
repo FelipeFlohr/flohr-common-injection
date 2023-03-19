@@ -1,6 +1,6 @@
 {
   "name": "@felipeflohr/flohr-common-injection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DI and IoC used in my personal projects.",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@FelipeFlohr",

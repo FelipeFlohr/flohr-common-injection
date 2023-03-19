@@ -10,7 +10,7 @@ export default class InversifyContainerImpl implements Container {
         this.inversifyContainer = new InverisfyContainer();
     }
 
-    public bind<T>(identifier: symbol): Bind {
+    public bind<T>(identifier: symbol): Bind<T> {
         const bind = this.inversifyContainer.bind<T>(identifier);
         return InversifyBindImpl.fromInverisfyBind(bind);
     }
